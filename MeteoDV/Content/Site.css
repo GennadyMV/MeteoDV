@@ -1,61 +1,154 @@
 ﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
+    font-family: Roboto,sans-serif;
 }
 
-header, footer, nav, section {
-    display: block;
+nav {
+    font-size: 18px;
 }
 
 
-/* Styles for basic forms
------------------------------------------------------------*/
-fieldset {
-    border: 1px solid #ddd;
-    padding: 0 1.4em 1.4em 1.4em;
-    margin: 0 0 1.5em 0;
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > li > a {
+	color: blue;
+    line-height: 24px;    
 }
 
-legend {
-    font-size: 1.2em;
-    font-weight: bold;
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
+	color: blue;
+    line-height: 24px;    
 }
 
-textarea {
-    min-height: 75px;
+.navbar-default .navbar-nav > .help > ::before {
+    content: "";
+    display: inline-block;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAAAXNSR0IArs4c6QAAAhJJREFUOBGlVD1oFEEU/mbusgfBiCE/XBMLuyhELEQEG4UUiYVy8dYQVEyaEFBBG7G7LliYIqlVSES9izkIaDqtAqKNRNTCQvBsQsglhwfhbrPZ8XtzuZ/RSjLFzs77ft6bN7Or8PdI5zxg7zrDVwBzElBdnIuc1xh7BcQWsOgHrTLVukA6dxYIn1GQhEIeSq3CqE0o0w1jzsEgRcN1IH6NRu/r2qaJnx2GiSg0HxBPjOP5yI86qTGPLR1DWH1K4zNQOoXc1RXBaiY18BPBPHKjE6zAWOHY605UK93QUZGZt2wsYzS+vnzMZCkmOyXJtAXCYJqlbqOj/U7DwM/6CMufoYPv7NE3pF9In4CMiixP+KLj0LiR76LBCLS+hyeXyhK0w0T3WWgJKnaTxiX25O4+AssTvuio16gGFwgG6D38pkGyL7EpqMRltPdm2cwC0yUcXPjK7Ipes5lH2ZlfmBuuOqRF/yP6j/zEzvpDVjHIquYd3PJVQfS1njhoy+LLJo/c3OJJzOF48lEL4rxqEuiGPtxeccsVWmyvh89V6MQMMudDR2n5hrvQBe7Ue0fQw8bviw5JFp7Hk9FrqKD0DyZ8o9pErzGfKrInS4iiGUwsdzjkSjjEfkyibfe0Exee8EVHfa0nce8BA50o78xS1LzFyUOz3NMATqTfNkwEF57wRcfRFBz42tfTHPgDbBr996/gD7XK4xULFqfzAAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 16px;
+    margin-right: 8px;
+    position: relative;
+    top: 4px;
+    vertical-align: top;
 }
 
-.editor-label {
-    margin: 1em 0 0 0;
+.navbar-default .navbar-nav > li
+{
+    top: 20px;
+}
+.navbar {
+    height: 100px;
 }
 
-.editor-field {
-    margin: 0.5em 0 0 0;
+
+.footer-container {
+	width: 100%;
+	opacity: 1;
+	transition: opacity 500ms ease-out 0.2s, transform 500ms cubic-bezier(0, 0.9, 0.1, 1) 0.2s, -webkit-transform 500ms cubic-bezier(0, 0.9, 0.1, 1) 0.2s;
+	transform: translate(0px, 0px);
+	padding-top: 42px;
+}
+.footer-container::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+	background-color: #FFF;
+	height: 100%;
 }
 
-
-/* Styles for validation helpers
------------------------------------------------------------*/
-.field-validation-error {
-    color: #f00;
+.footer {
+	width: 960px;
+	position: relative;
+	margin: 0px auto;
+	font-size: 14px;
+	line-height: 18px;
+	padding-top: 32px;
+	color: #999;
+	height: 90px;
+	box-sizing: border-box;
+}
+.footer__map-section {
+	font-size: 14px;
 }
 
-.field-validation-valid {
-    display: none;
+.footer__map-section-links {
+	margin: 0px;
+	padding: 0px;
+	list-style: outside none none;
 }
 
-.input-validation-error {
-    border: 1px solid #f00;
-    background-color: #fee;
+.footer__map-section-link {
+	color: #999;
+	margin-top: 6px;
+	line-height: 18px;
 }
 
-.validation-summary-errors {
-    font-weight: bold;
-    color: #f00;
+.footer__copyright {
+	margin-top: 1px;
+	line-height: 20px;
+	display: inline-block;
 }
 
-.validation-summary-valid {
-    display: none;
+.footer__menu {
+	position: absolute;
+	right: 0px;
+	top: 32px;
+}
+
+.footer a {
+	color: inherit;
+}
+
+.footer__menu-button {
+	margin-left: 30px;
+	line-height: 20px;
+	margin-top: 1px;
+	float: left;
+	display: block;
+}
+
+.footer__menu::after {
+	content: " ";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+.footer__map {
+	width: 960px;
+	margin: 0px auto;
+	padding-top: 19px;
+	padding-bottom: 36px;
+}
+
+.footer__map::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	background-color: #E6E6E6;
+	margin-top: -19px;
+}
+.footer__map::after {
+	content: " ";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+}
+.footer-container::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #E6E6E6;
+	left: 0px;
+	bottom: 90px;
 }
